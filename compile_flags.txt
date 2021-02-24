@@ -1,4 +1,3 @@
-clang
 -I/usr/avr/include
 -include/usr/avr/include/avr/iom32.h
 -I./include
