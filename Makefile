@@ -99,7 +99,9 @@ PRJSRC=$(wildcard *.c) $(wildcard **/*.c) $(wildcard **/*/*.c) \
 
 
 # additional includes (e.g. -I/path/to/mydir)
-INC?=-I./include
+INC?= \
+-I./include \
+-I./lib/Led
 
 # libraries to link in (e.g. -lmylib)
 LIBS?=

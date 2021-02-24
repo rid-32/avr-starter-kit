@@ -1,15 +1,20 @@
 #define F_CPU 12000000L
 
+#ifndef __AVR_ATmega32__
+#define __AVR_ATmega32__
+#endif
+
+#include "settings.h"
+#include <Led.h>
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
 
-int main() {
-  DDRD = 0x04;
-  PORTD = 0x00;
+led::Led Led(&LED_PORT, LED_PIN);
 
+int main() {
   while (true) {
-    PORTD ^= 0x04;
+    Led.toggle();
 
     _delay_ms(500);
   }
