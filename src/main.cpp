@@ -5,7 +5,7 @@
 #endif
 
 #include "settings.h"
-#include <Led.h>
+#include <Led.hpp>
 #include <avr/io.h>
 #include <stdint.h>
 #include <util/delay.h>
